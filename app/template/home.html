@@ -1,0 +1,24 @@
+<div class="row" ng-show="logged">
+	<div class="col-md-8">
+		<ul class="list-group" ng-repeat="habitat in listHabitats">
+			<li class="list-group-item {{habitat.color}}">
+				<div class="row">
+					<div class="col-md-8">
+						<strong>{{habitat.txtLibre}}</strong><br/>
+						<em>{{habitat.infosLoc}}</em><br/>
+						<a ng-show="habitat.haveLink" href="http://{{habitat.linkAnnonce}}" target=_blank>Lien vers l'annonce</a>
+					</div>
+					<div class="col-md-4 text-right">
+						<strong>{{habitat.alert}}</strong>
+						<span class="badge">{{habitat.prix}}</span><br/>
+						<a href="#/editHabitat?idHabit={{habitat.id}}" title="Modifier/Voir"><img src="image/modif.png" /><img src="image/voir.png" /></a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2>Mes paramètres</h2>
+		<strong>Mon budget</strong> :{{params.budget}}
+	</div>
+</div>
