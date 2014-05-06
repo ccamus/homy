@@ -1,1 +1,22 @@
-body { padding-top: 70px; }
+body { 
+	padding-top: 70px;
+}
+
+#footer {
+margin-top : 30px;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 180px;
+  background: 
+  /* color overlay */ 
+    linear-gradient(
+      rgba(240, 212, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),
+    /* image to overlay */
+    url('/image/footerImg.jpg');
+}
+.footertext {
+  color: #ffffff;
+}

@@ -3,123 +3,237 @@
 ------------------------------------------------>
 <div class="alert alert-success" ng-show="success">{{messageAlert}}</div>
 <div class="alert alert-danger" ng-show="error">{{messageAlert}}</div>
-
-<form class="form-horizontal" role="form">
-	<input type="hidden" ng-model="habitatEdit.id">
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="panel panel-primary">
-				<div class="panel-heading">Informations de base</div>
-				<div class="panel-body">
-					<div class="form-group">
-						<label for="freeDescription" class="col-sm-2 control-label">Texte libre de description</label>
-						<div class="col-sm-10">
-							<textarea id="freeDescription" class="form-control" rows="3" ng-model="habitatEdit.txtLibre"></textarea>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="prix" class="col-sm-2 control-label">Prix</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="prix" placeholder="Prix" ng-model="habitatEdit.prix">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="localisation" class="col-sm-2 control-label">Informations de localisation</label>
-						<div class="col-sm-10">
-							<textarea id="localisation" class="form-control" rows="3" ng-model="habitatEdit.infosLoc"></textarea>
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="linkAnnonce" class="col-sm-2 control-label">Lien vers l'annnonce</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="linkAnnonce" placeholder="Lien vers l'annonce" ng-model="habitatEdit.linkAnnonce">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="panel panel-primary">
-				<div class="panel-heading">L'espace</div>
-				<div class="panel-body">
-					<div class="form-group">
-						<label for="surfH" class="col-sm-2 control-label">Surface habitable</label>
-						<div class="col-sm-9">
-							<input type="text" class="form-control" id="surfH" placeholder="Surface habitable" ng-model="habitatEdit.surfH">
-						</div>
-						<label for="surfH" class="col-sm-1 control-label">m²</label>
-					</div>
-					<div class="form-group">
-						<label for="surfT" class="col-sm-2 control-label">Surface de terrain</label>
-						<div class="col-sm-9">
-							<input type="text" class="form-control" id="surfT" placeholder="Surface de terrain" ng-model="habitatEdit.surfT">
-						</div>
-						<label for="surfT" class="col-sm-1 control-label">m²</label>
-					</div>
-					<div class="form-group">
-						<label for="nbCh" class="col-sm-2 control-label">Nombre de chambres</label>
-						<div class="col-sm-9">
-							<input type="text" class="form-control" id="nbCh" placeholder="Nombre de chambres" ng-model="habitatEdit.nbCh">
-						</div>
-						<label for="nbCh" class="col-sm-1 control-label">m²</label>
-					</div>
-					<div class="form-group">
-						<label for="nbPiece" class="col-sm-2 control-label">Nombre de pièces</label>
-						<div class="col-sm-9">
-							<input type="text" class="form-control" id="nbPiece" placeholder="Nombre de pièces" ng-model="habitatEdit.nbPiece">
-						</div>
-						<label for="nbPiece" class="col-sm-1 control-label">m²</label>
-					</div>
-					<div class="form-group">
-						<label for="nbEtage" class="col-sm-2 control-label">Nombre d'étages</label>
-						<div class="col-sm-9">
-							<input type="text" class="form-control" id="nbEtage" placeholder="Nombre d'étages" ng-model="habitatEdit.nbEtage">
-						</div>
-						<label for="nbEtage" class="col-sm-1 control-label">m²</label>
-					</div>
-				</div>
-			</div>
-		</div>
+	
+<div class="affix" style="width:20%">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<ul class="list-unstyled">
+				<li><strong>{{habitatEdit.tBien}}</strong></li>
+				<li><h3>{{habitatEdit.note}}/10</h3></li>
+				<li><h3>{{habitatEdit.prix}}</h3></li>
+				<li><em>{{habitatEdit.txtLibre}}</em></li>
+			</ul>
+		</div>	
 	</div>
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="panel panel-warning">
-				<div class="panel-heading">Energie</div>
-				<div class="panel-body">
-					<div class="form-group">
-						<label for="typeChauff" class="col-sm-2 control-label">Type de chauffage</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="typeChauff" placeholder="Type de chauffage" ng-model="habitatEdit.typeChauff">
+</div>
+	
+<div class="row">
+			
+	<div class="col-md-9 col-md-offset-3">		
+		<form class="form-horizontal" role="form">
+			<input type="hidden" ng-model="habitatEdit.id">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Informations de base</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<label for="tBien" class="col-sm-3 control-label">Type de bien</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="tBien" placeholder="Type de bien" ng-model="habitatEdit.tBien">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="freeDescription" class="col-sm-3 control-label">Texte libre de description</label>
+								<div class="col-sm-9">
+									<textarea id="freeDescription" class="form-control" rows="3" ng-model="habitatEdit.txtLibre"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="prix" class="col-sm-3 control-label">Prix</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="prix" placeholder="Prix" ng-model="habitatEdit.prix">
+								</div>
+								<label for="prix" class="col-sm-2 control-label">EUR</label>
+							</div>
+							<div class="form-group">
+								<label for="localisation" class="col-sm-3 control-label">Informations de localisation</label>
+								<div class="col-sm-9">
+									<textarea id="localisation" class="form-control" rows="3" ng-model="habitatEdit.infosLoc"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="linkAnnonce" class="col-sm-3 control-label">Lien vers l'annnonce</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="linkAnnonce" placeholder="Lien vers l'annonce" ng-model="habitatEdit.linkAnnonce">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="annee" class="col-sm-3 control-label">Année de contruction</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="annee" placeholder="Année de contruction" ng-model="habitatEdit.annee">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="note" class="col-sm-3 control-label">Note personnelle</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="note" placeholder="Note personnelle" ng-model="habitatEdit.note">
+								</div>
+								<label for="note" class="col-sm-2 control-label">/10</label>
+							</div>
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="dpe" class="col-sm-2 control-label">Indice DPE</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="dpe" placeholder="DPE" ng-model="habitatEdit.dpe">
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">L'espace</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<label for="surfH" class="col-sm-3 control-label">Surface habitable</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="surfH" placeholder="Surface habitable" ng-model="habitatEdit.surfH">
+								</div>
+								<label for="surfH" class="col-sm-2 control-label">m²</label>
+							</div>
+							<div class="form-group">
+								<label for="surfT" class="col-sm-3 control-label">Surface de terrain</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="surfT" placeholder="Surface de terrain" ng-model="habitatEdit.surfT">
+								</div>
+								<label for="surfT" class="col-sm-2 control-label">m²</label>
+							</div>
+							<div class="form-group">
+								<label for="nbEtage" class="col-sm-3 control-label">Nombre d'étages</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="nbEtage" placeholder="Nombre d'étages" ng-model="habitatEdit.nbEtage">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="nbPiece" class="col-sm-3 control-label">Nombre de pièces</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="nbPiece" placeholder="Nombre de pièces" ng-model="habitatEdit.nbPiece">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="nbCh" class="col-sm-3 control-label">Nombre de chambres</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="nbCh" placeholder="Nombre de chambres" ng-model="habitatEdit.nbCh">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="sdb" class="col-sm-3 control-label">Nombre de salles de bain</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="sdb" placeholder="Nombre de salles de bain" ng-model="habitatEdit.sdb">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="wc" class="col-sm-3 control-label">Nombre de WC</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="wc" placeholder="Nombre de WC" ng-model="habitatEdit.wc">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="panel panel-info">
-				<div class="panel-heading">Contact</div>
-				<div class="panel-body">
-					<div class="form-group">
-						<label for="agence" class="col-sm-2 control-label">Agence</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="agence" placeholder="Agence" ng-model="habitatEdit.agence">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="panel panel-success">
+						<div class="panel-heading">Extérieurs</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<label for="couverture" class="col-sm-3 control-label">Couverture</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="couverture" placeholder="Couverture" ng-model="habitatEdit.couverture">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="construction" class="col-sm-3 control-label">Construction</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="construction" placeholder="Construction" ng-model="habitatEdit.construction">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="fenetres" class="col-sm-3 control-label">Fenêtres</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="fenetres" placeholder="Fenêtres" ng-model="habitatEdit.fenetres">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="volets" class="col-sm-3 control-label">Volets</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="volets" placeholder="Volets" ng-model="habitatEdit.volets">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="assainissement" class="col-sm-3 control-label">Assainissement</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="assainissement" placeholder="Assainissement" ng-model="habitatEdit.assainissement">
+								</div>
+							</div>
+							
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="contact" class="col-sm-2 control-label">Contact</label>
-						<div class="col-sm-10">
-							<textarea id="contact" class="form-control" rows="3" ng-model="habitatEdit.contact"></textarea>
+				</div>	
+				<div class="col-sm-6">
+					<div class="panel panel-warning">
+						<div class="panel-heading">Energie</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<label for="typeChauff" class="col-sm-3 control-label">Type de chauffage</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="typeChauff" placeholder="Type de chauffage" ng-model="habitatEdit.typeChauff">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="dpe" class="col-sm-3 control-label">Indice DPE</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="dpe" placeholder="DPE" ng-model="habitatEdit.dpe">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="ges" class="col-sm-3 control-label">Indice GES</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="ges" placeholder="GES" ng-model="habitatEdit.ges">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="panel panel-info">
+						<div class="panel-heading">Coût</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<label for="coutEnergie" class="col-sm-3 control-label">Coût de l'énergie</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="coutEnergie" placeholder="Coût de l'énergie" ng-model="habitatEdit.coutEnergie">
+								</div>
+								<label for="coutEnergie" class="col-sm-2 control-label">EUR</label>
+							</div>
+							<div class="form-group">
+								<label for="tHab" class="col-sm-3 control-label">Taxe d'habitation</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="tHab" placeholder="Taxe d'habitation" ng-model="habitatEdit.tHab">
+								</div>
+								<label for="tHab" class="col-sm-2 control-label">EUR/an</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="panel panel-info">
+						<div class="panel-heading">Contact</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<label for="agence" class="col-sm-3 control-label">Agence</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="agence" placeholder="Agence" ng-model="habitatEdit.agence">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contact" class="col-sm-3 control-label">Contact</label>
+								<div class="col-sm-9">
+									<textarea id="contact" class="form-control" rows="3" ng-model="habitatEdit.contact"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="saveHabitat()" >Enregistrer</button>
+		</form>
 	</div>
-	<button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="saveHabitat()" >Enregistrer</button>
-</form>
+</div>
