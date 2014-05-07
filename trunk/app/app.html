@@ -36,7 +36,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="/">Homy</a>
+			  <a class="navbar-brand" href="#/">Homy</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,11 +45,7 @@
 					<li><a href="#/editHabitat" title="Ajouter un habitat"><img src="image/addHome.png"/></a></li>
 				</ul>
 				
-			  <ul class="nav navbar-nav navbar-right" ng-if="!logged">
-					<li><a href="" data-toggle="modal" data-target="#connexionModal">Connexion</a></li>
-					<li><a href="" data-toggle="modal" data-target="#createCompteModal">Créer un compte</a></li>
-			  </ul>
-			  <ul class="nav navbar-nav navbar-right" ng-if="logged">
+				<ul class="nav navbar-nav navbar-right" ng-if="logged">
 					<li><a href="#/param" title="Paramétrage du compte"><img src="image/engrenage.png"/></a></li>
 					<li class="dropdown"><a data-toggle="dropdown" href="">{{user.mail}}</a>
 						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="padding:17px;">
@@ -61,86 +57,10 @@
 							</div>
 						</ul>
 					</li>
-			  </ul>
+				</ul>
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-		
-		<!-- Modal connexion -->
-		<div class="modal fade" id="connexionModal" tabindex="-1" role="dialog" aria-hidden="true">
-		  <div class="modal-dialog">
-			<div class="modal-content">
-			  <div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Connexion utilisateur</h4>
-			  </div>
-				<form class="form-horizontal" role="form">
-				  <div class="modal-body">
-					   <div class="form-group">
-							<label for="mail" class="col-sm-2 control-label">Adresse mail</label>
-							<div class="col-sm-10">
-								<input type="email" class="form-control" id="mail" placeholder="Email" ng-model="loginUser.mail">
-							</div>
-						</div>
-					   <div class="form-group">
-							<label for="password" class="col-sm-2 control-label">Mot de passe</label>
-							<div class="col-sm-10">
-								<input type="password" class="form-control" id="password" placeholder="Mot de passe" ng-model="loginUser.mdp">
-							</div>
-						</div>
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-					<button type="submit" class="btn btn-primary" ng-click="login()" onClick="$('#connexionModal').modal('toggle')">Connexion</button>
-				  </div>
-				 </form>
-			</div>
-		  </div>
-		</div>
-		
-		<!-- Modal Creation de compte -->
-		<div class="modal fade" id="createCompteModal" tabindex="-1" role="dialog" aria-hidden="true">
-		  <div class="modal-dialog">
-			<div class="modal-content">
-			  <div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title" id="myModalLabel">Création d'un compte</h4>
-			  </div>
-				<form class="form-horizontal" role="form">
-				  <div class="modal-body">
-						<div class="form-group">
-							<label for="nom" class="col-sm-2 control-label">Nom</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="nom" placeholder="Nom" ng-model="userCreate.nom">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="prenom" class="col-sm-2 control-label">Prenom</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="prenom" placeholder="Prenom" ng-model="userCreate.prenom">
-							</div>
-						</div>
-					   <div class="form-group">
-							<label for="mail" class="col-sm-2 control-label">Adresse mail</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="mail" placeholder="Email" ng-model="userCreate.mail">
-							</div>
-						</div>
-					   <div class="form-group">
-							<label for="password" class="col-sm-2 control-label">Mot de passe</label>
-							<div class="col-sm-10">
-								<input type="password" class="form-control" id="password" placeholder="Mot de passe" ng-model="userCreate.mdp">
-							</div>
-						</div>
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-					<button type="submit" class="btn btn-primary" ng-click="creUser()" onClick="$('#createCompteModal').modal('toggle')">Créer un compte</button>
-				  </div>
-				 </form>
-			</div>
-		  </div>
-		</div>
 	</div>
 	<div class="container" ng-view>
 	</div>

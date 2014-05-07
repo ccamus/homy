@@ -6,3 +6,5 @@ routeProvider.config(function($routeProvider){
 	.when('/editHabitat',{templateUrl:'template/editHabitat.html',controller:'editHabitatController'})
 	.otherwise({redirectTo:'/home'});
 })
+
+var homeRouteProvider=angular.module('homeRouteProvider',['ngRoute']);

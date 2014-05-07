@@ -29,6 +29,9 @@ var connectedUsers = [];
  *************  DEFINITION DES ROUTES  ****************
  ----------------------------------------------------*/
 app.get('/', function (req, res) {
+	res.sendfile(__dirname + '/app/home.html');
+});
+app.get('/homy', function (req, res) {
 	res.sendfile(__dirname + '/app/app.html');
 });
 
@@ -243,7 +246,10 @@ app.get('/findParams', function(req, res){
 /*-----------------------------------------------------
  ******************************************************
  ----------------------------------------------------*/
-app.listen(3000);
+ // Production
+//app.listen(3000);
+ // Dev
+app.listen(8080);
 
 
 
