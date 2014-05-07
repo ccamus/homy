@@ -3,7 +3,7 @@ body {
 }
 
 #footer {
-margin-top : 30px;
+  position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -19,4 +19,41 @@ margin-top : 30px;
 }
 .footertext {
   color: #ffffff;
+}
+
+.bghome{
+	min-height: 100%;
+	z-index:1;
+	background-size:cover;
+
+	/* Set up proportionate scaling */
+	width: 100%;
+	min-width:1300px;
+	height: auto;
+
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.accueil{
+  z-index:2;
+  position: relative;
+}
+.accueilFont{
+	font-size:36px;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:arial;
+}
+
+.accueilInfo {
+	z-index:2;
+	position: absolute;
+	bottom:0px;
+	right:70px;
+}
+
+.accueilInfo a{
+	color:#FFFFFF;
 }

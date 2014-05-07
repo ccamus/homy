@@ -1,23 +1,12 @@
 
-/**************** CONTROLLER DU MENU **************************/
-function headController($scope,$http,$route){
-	
+/**************** CONTROLLER DE L'ACCUEIL *********************/
+function accueilController($scope,$http,$window){
 	$scope.creUser=function(){
 		$http.post('/addUser',$scope.userCreate)
 			.success(function(data){
 				$scope.userCreate="";
 			})
 			.error(function(data){
-			})
-	}
-	$scope.alreadyLogged=function(){
-		$http.get('/alreadyauthenticated')
-			.success(function(data){
-				$scope.logged=false;
-				if(data.nom!=null){
-					$scope.logged=true;
-					$scope.user=data;
-				}
 			})
 	}
 	$scope.login=function(){
@@ -27,18 +16,48 @@ function headController($scope,$http,$route){
 				$scope.logged=true;
 				$scope.user=data;
 				
-				$route.reload();
+				$window.location.href="/homy";
 			})
 			.error(function(data){
 			})
 		$route.reload();
 	}
+	
+	$http.get('/alreadyauthenticated')
+		.success(function(data){
+			// On est loggé, donc on redirige
+			$window.location.href="/homy";
+		})
+		.error(function(data){
+			// Pas loggé
+		})
+	var r = Math.floor((Math.random() * 2) + 1);
+	$scope.img="/image/accueil00"+r+".jpg";
+	$('#popover').popover();
+
+}
+
+/**************** CONTROLLER DU MENU **************************/
+function headController($scope,$http,$route,$window){
+
+	$scope.alreadyLogged=function(){
+		$http.get('/alreadyauthenticated')
+			.success(function(data){
+				$scope.logged=false;
+				if(data.nom!=null){
+					$scope.logged=true;
+					$scope.user=data;
+				}
+			})
+			.error(function(data){
+				$window.location.href="/";
+			})
+	}
 	$scope.logoff=function(){
 		$http.get('/logoff')
 			.success(function(data){
 				$scope.logged=false;
-				
-				$route.reload();
+				$window.location.href="/";
 			})
 			.error(function(data){
 			})
