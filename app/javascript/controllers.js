@@ -63,6 +63,7 @@ function headController($scope,$http,$route,$window){
 			})
 	}
 	$scope.alreadyLogged();
+	$('#popover').popover();
 }
 
 /**************** CONTROLLER DE L'ACCUEIL *********************/
