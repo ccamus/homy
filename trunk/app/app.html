@@ -7,7 +7,7 @@
     <title>Homy</title>
 
     <!-- Bootstrap -->
-    <link href="lib/bootstrap/css/bootstrap.cerulean.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Angular -->
 	<script src="lib/angular.min.js"></script>
 	<script src="lib/angular-route.min.js"></script>
@@ -26,7 +26,7 @@
   <body ng-app="routeProvider">
 	<div class="container" ng-controller="headController">
 		
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -61,17 +61,16 @@
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
+	
+		<div class="accueilInfo otherInfo">
+			<a id="popover" href=""
+				data-toggle="popover" data-placement="top" data-html="true"
+				data-content="Homy, application développée par Charlie Camus.<br/>Bootstrap, Bootswatch, nodejs, angularjs, glyphicons.">
+				<span class="glyphicon glyphicon-info-sign"></span>
+			</a>
+		</div>
 	</div>
 	<div class="container" ng-view>
-	</div>
-	
-	<div id="footer">
-		<div class="container"><center>
-			<p class="footertext">
-				Homy, application développée par Charlie Camus,<br/>
-				Bootstrap, Bootswatch, nodejs, angularjs, glyphicons
-			</p></center>
-		</div>
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="lib/jquery-1.11.0.min.js"></script>
