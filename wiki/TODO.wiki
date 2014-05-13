@@ -3,7 +3,7 @@
  * Vérification du typage des champs
  * Informations déroulables sur la liste des habitats (accueil)
  * Mise en place du système de note
-  # ~~Définition du principeé~~
+  # ~~Définition du principe~~
   # Creation des paramètres dans l'appli
   # Creation du système de note dans l'appli
  * Création des listes déroulantes etc
