@@ -2,4 +2,11 @@
 
  * Vérification du typage des champs
  * Informations déroulables sur la liste des habitats (accueil)
- * 
+ * Mise en place du système de note
+ * Création des paramètres pour les notes
+ * Création des listes déroulantes etc
+ * Création du logo
+ * Mise en place du validation du compte par mail
+  # Utilisation du compte seulement s'il a été validé par mail
+  # Création d'un demon qui supprime les comptes non validés au bout d'un certain temps
+ * Modification et suppression de compte
