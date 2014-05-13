@@ -29,4 +29,5 @@ Pour la plupart des notes, plus c'est grand ou petit, et mieux c'est, c'est une 
  * Coût de l'énergie
  * Taxe d'habitation
 === Calcul ===
- * T1 = Note personnelle `*` %
+ * T1 = Note personnelle `*` %1
+ * T2 = unsigned(Année paramétrée - Année de construction)
