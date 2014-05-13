@@ -41,3 +41,5 @@ L'idée est, dans un premier temps, de tout ramener sur 100 : (ici x est la vale
  * Res11 = 100 - (x`*`(100/(plus grand x))) (Indice GES)
  * Res12 = 100 - (x`*`(100/(plus grand x))) (Coût de l'énergie)
  * Res13 = 100 - (x`*`(100/(plus grand x))) (Taxe d'habitation)
+Ensuite, on multiplie par les pourcentage, et on ramène à une base 100 :
+RESULTAT FINAL = (Res1 `*` %1 + Res2 `*` %2 + Res3 `*` %3 + Res4 `*` %4 + Res5 `*` %5 + Res6 `*` %6 + Res7 `*` %7 + Res8 `*` %8 + Res9 `*` %9 + Res10 `*` %10 + Res11 `*` %11 + Res12 `*` %12 + Res13 `*` %13) / ( %1 + %2 + %3 + %4 + %5 + %6 + %7 + %8 + %9 + %10 + %11 + %12 + %13)
