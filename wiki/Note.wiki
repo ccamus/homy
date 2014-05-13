@@ -1,0 +1,30 @@
+= Définition du système de note =
+
+== Introduction ==
+Le système de note va permettre à un utilisateur d'ordonner la liste des habitats créés en fonction de paramètres qu'il aurait définit en amont.
+
+== Définition ==
+=== Périmètre ===
+Le système de note sera utilisable pour les champs suivants : 
+ * Note personnelle
+ * Année de construction
+ * Surface habitable
+ * Surface de terrain
+ * Nombre d'étages
+ * Nombre de pièces
+ * Nombre de chambres
+ * Nombre de salles de bain
+ * Nombre de WC
+ * Indice DPE
+ * Indice GES
+ * Coût de l'énergie
+ * Taxe d'habitation
+=== Paramétrage ===
+On paramètre en pourcentage, 0% indique qu'on s'en moque, 100% indique que c'est très important.
+Pour la plupart des notes, plus c'est grand ou petit, et mieux c'est, c'est une évidence. Mais pour certaines notes, il faudra paramétrer de la valeur dont laquelle on veut se rapprocher. Voici la liste exhaustive de ces paramètres :
+ * Année de construction
+ * Surface de terrain
+ * Nombre d'étages
+ * Nombre de chambres
+ * Coût de l'énergie
+ * Taxe d'habitation
