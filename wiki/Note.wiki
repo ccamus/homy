@@ -28,3 +28,5 @@ Pour la plupart des notes, plus c'est grand ou petit, et mieux c'est, c'est une 
  * Nombre de chambres
  * Coût de l'énergie
  * Taxe d'habitation
+=== Calcul ===
+ * T1 = Note personnelle `*` %
