@@ -3,8 +3,12 @@
  * Vérification du typage des champs
  * Informations déroulables sur la liste des habitats (accueil)
  * Mise en place du système de note
- * Création des paramètres pour les notes
+  # ~~Définition du principeé~~
+  # Creation des paramètres dans l'appli
+  # Creation du système de note dans l'appli
  * Création des listes déroulantes etc
+  # Definition des listes
+  # Insertion des listes dans l'appli
  * Création du logo
  * Mise en place du validation du compte par mail
   # Utilisation du compte seulement s'il a été validé par mail
