@@ -1,3 +1,5 @@
 = TODO List =
 
-* Vérification du typage des champs
+ * Vérification du typage des champs
+ * Informations déroulables sur la liste des habitats (accueil)
+ * 
