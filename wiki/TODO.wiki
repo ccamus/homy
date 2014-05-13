@@ -10,3 +10,4 @@
   # Utilisation du compte seulement s'il a été validé par mail
   # Création d'un demon qui supprime les comptes non validés au bout d'un certain temps
  * Modification et suppression de compte
+ * Amélioration du style
