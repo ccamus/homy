@@ -26,8 +26,18 @@ Pour la plupart des notes, plus c'est grand ou petit, et mieux c'est, c'est une 
  * Surface de terrain
  * Nombre d'étages
  * Nombre de chambres
- * Coût de l'énergie
- * Taxe d'habitation
 === Calcul ===
- * T1 = Note personnelle `*` %1
- * T2 = unsigned(Année paramétrée - Année de construction)
+L'idée est, dans un premier temps, de tout ramener sur 100 : (ici x est la valeur à rapporter sur 100) 
+ * R1 = 10 * x (Note personnelle)
+ * R2 = 100 - (y*(100/(plus grand y))) avec y = unsigned(Année pramétrée - x) (Année de construction)
+ * R3 = x*(100/(plus grand x)) (Surface habitable)
+ * R4 = 100 - (y*(100/(plus grand y))) avec y = unsigned(Terrain paramétré - x) (Surface de terrain)
+ * R5 = 100 - (y*(100/(plus grand y))) avec y = unsigned(Etages paramétré - x) (Nombre d'étages)
+ * R6 = x*(100/(plus grand x)) (Nombre de pièces)
+ * R7 = 100 - (y*(100/(plus grand y))) avec y = unsigned(Chambres paramétré - x) (Nombre de chambres)
+ * R8 = x*(100/(plus grand x)) (Nombre de salles de bain)
+ * R9 = x*(100/(plus grand x)) (Nombre de WC)
+ * R9 = 100 - (x*(100/(plus grand x))) (Indice DPE)
+ * R9 = 100 - (x*(100/(plus grand x))) (Indice GES)
+ * R9 = 100 - (x*(100/(plus grand x))) (Coût de l'énergie)
+ * R9 = 100 - (x*(100/(plus grand x))) (Taxe d'habitation)
