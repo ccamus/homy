@@ -37,8 +37,8 @@ L'idée est, dans un premier temps, de tout ramener sur 100 : (ici x est la vale
  * Res7 = 100 - (y`*`(100/(plus grand y))) avec y = unsigned(Chambres paramétré - x) (Nombre de chambres)
  * Res8 = x`*`(100/(plus grand x)) (Nombre de salles de bain)
  * Res9 = x`*`(100/(plus grand x)) (Nombre de WC)
- * Res10 = 100 - (x`*`(100/(plus grand x))) (Indice DPE)
- * Res11 = 100 - (x`*`(100/(plus grand x))) (Indice GES)
+ * Res10 = (7 - x) `*` (100/7) (Indice DPE)
+ * Res11 = (7 - x) `*` (100/7) (Indice GES)
  * Res12 = 100 - (x`*`(100/(plus grand x))) (Coût de l'énergie)
  * Res13 = 100 - (x`*`(100/(plus grand x))) (Taxe d'habitation)
 Ensuite, on multiplie par les pourcentage, et on ramène à une base 100 :
