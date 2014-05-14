@@ -1,0 +1,21 @@
+= Définition des données =
+
+== Param ==
+ * budget (le budget)
+ * prefNotePers (pourcentage note personnelle)
+ * prefAnneeCons (pourcentage année de construction)
+ * prefSurfH (pourcentage surface habitable)
+ * prefSurfT (pourcentage surface de terrain)
+ * prefEtages (pourcentage etages)
+ * prefNbPieces (pourcentage nombre de pièces)
+ * prefNbCh (pourcentage nombre de chambres)
+ * prefNbSdb (pourcentage nombre de salle de bain)
+ * prefNbWc (pourcentage nombre de WC)
+ * prefDpe (pourcentage DPE)
+ * prefGes (pourcentage GES)
+ * prefCoutEnergie (pourcentage cout energie)
+ * prefTxHab (pourcentage taxe d'habitation)
+ * anneeSouhaite (année souhaitée)
+ * surfTSouhaite (surface de terrain souhaitée)
+ * nbEtagesSouhaite (nombre d'étages souhaités)
+ * nbChSouhaite (nombre de chambres souhaitées)
