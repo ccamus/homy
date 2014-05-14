@@ -1,5 +1,11 @@
 = Définition des données =
 
+== user ==
+ * *nom* (nom)
+ * *prenom* (prenom)
+ * *mail* (mail)
+ * *mdp* (mdp)
+
 == Param ==
  * *budget* (le budget)
  * *prefNotePers* (pourcentage note personnelle)
@@ -19,3 +25,5 @@
  * *surfTSouhaite* (surface de terrain souhaitée)
  * *nbEtagesSouhaite* (nombre d'étages souhaités)
  * *nbChSouhaite* (nombre de chambres souhaitées)
+
+== habitat ==
