@@ -1,15 +1,155 @@
 <!-----------------------------------------------
 ------ template pour l'edition des paramètres ---
 ------------------------------------------------>
-<div class="alert alert-success" ng-show="success">{{messageAlert}}</div>
-<div class="alert alert-danger" ng-show="error">{{messageAlert}}</div>
-
 <form class="form-horizontal" role="form">
 	<div class="form-group">
 		<label for="budget" class="col-sm-2 control-label">Budget</label>
-		<div class="col-sm-10">
+		<div class="col-sm-9">
 			<input type="text" class="form-control" id="budget" placeholder="Budget" ng-model="paramEdit.budget">
 		</div>
+		<label for="budget" class="col-sm-1 control-label">EUR</label>
 	</div>
+	
+	<div class="row">
+		<div class="col-sm-12"><hr style="border-color:#000000;"></div>
+	</div>
+	
+	<br/>
+	<div class="texteInfos">
+		<p>Les données ci-dessous vont vous permettre de définir vos préférences. 
+		Sur la base de celles-ci, des notes seront distribués pour chaque habitat. 
+		Ces préférences sont définies par des pourcentages :</p>
+		<ul>
+			<li> <strong>0%</strong> indique que le paramètre n'est <strong>pas important</strong> pour vous</li>
+			<li><strong>100%</strong> indique qu'il est <strong>très important</strong></li>
+		</ul>
+	</div>
+	<br/>
+	
+	<div class="form-group">
+		<label for="prefNotePers" class="col-sm-2 control-label">Note personnelle</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" id="prefNotePers" placeholder="Préférence de note personnelle" ng-model="paramEdit.prefNotePers">
+		</div>
+		<label for="prefNotePers" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="anneeSouhaite" class="col-sm-3 control-label">Année de construction souhaitée</label>
+		<div class="col-sm-3">
+			<input type="text" class="form-control" id="anneeSouhaite" placeholder="Année de construction souhaitée" ng-model="paramEdit.anneeSouhaite">
+		</div>
+		<label for="prefAnneeCons" class="col-sm-3 control-label">Préférence d'année de construction</label>
+		<div class="col-sm-2">
+			<input type="text" class="form-control" id="prefAnneeCons" placeholder="Préférence d'année de construction" ng-model="paramEdit.prefAnneeCons">
+		</div>
+		<label for="prefAnneeCons" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="prefSurfH" class="col-sm-2 control-label">Surface habitable</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" id="prefSurfH" placeholder="Préférence de surface habitable" ng-model="paramEdit.prefSurfH">
+		</div>
+		<label for="prefSurfH" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="surfTSouhaite" class="col-sm-3 control-label">Surface de terrain souhaitée</label>
+		<div class="col-sm-2">
+			<input type="text" class="form-control" id="surfTSouhaite" placeholder="Surface de terrain souhaitée" ng-model="paramEdit.surfTSouhaite">
+		</div>
+		<label for="surfTSouhaite" class="col-sm-1 control-label">m²</label>
+		<label for="prefSurfT" class="col-sm-3 control-label">Préférence de surface de terrain</label>
+		<div class="col-sm-2">
+			<input type="text" class="form-control" id="prefSurfT" placeholder="Préférence de surface de terrain" ng-model="paramEdit.prefSurfT">
+		</div>
+		<label for="prefSurfT" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="nbEtagesSouhaite" class="col-sm-3 control-label">Nombre d'étages souhaitée</label>
+		<div class="col-sm-3">
+			<input type="text" class="form-control" id="nbEtagesSouhaite" placeholder="Nombre d'étages souhaitée" ng-model="paramEdit.nbEtagesSouhaite">
+		</div>
+		<label for="prefEtages" class="col-sm-3 control-label">Préférence du nombre d'étages</label>
+		<div class="col-sm-2">
+			<input type="text" class="form-control" id="prefEtages" placeholder="Préférence du nombre d'étages" ng-model="paramEdit.prefEtages">
+		</div>
+		<label for="prefEtages" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="prefNbPieces" class="col-sm-2 control-label">Nombre de pièces</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" id="prefNbPieces" placeholder="Préférence de nombre de pièces" ng-model="paramEdit.prefNbPieces">
+		</div>
+		<label for="prefNbPieces" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="nbChSouhaite" class="col-sm-3 control-label">Nombre de chambres souhaitée</label>
+		<div class="col-sm-3">
+			<input type="text" class="form-control" id="nbChSouhaite" placeholder="Nombre de chambre souhaitée" ng-model="paramEdit.nbChSouhaite">
+		</div>
+		<label for="prefNbCh" class="col-sm-3 control-label">Préférence du nombre de chambres</label>
+		<div class="col-sm-2">
+			<input type="text" class="form-control" id="prefNbCh" placeholder="Préférence du nombre de chambres" ng-model="paramEdit.prefNbCh">
+		</div>
+		<label for="prefNbCh" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="prefNbSdb" class="col-sm-2 control-label">Nombre de salles de bain</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" id="prefNbSdb" placeholder="Préférence du nombre de salles de bain" ng-model="paramEdit.prefNbSdb">
+		</div>
+		<label for="prefNbSdb" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="prefNbWc" class="col-sm-2 control-label">Nombre de WC</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" id="prefNbWc" placeholder="Préférence du nombre de WC" ng-model="paramEdit.prefNbWc">
+		</div>
+		<label for="prefNbWc" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="prefDpe" class="col-sm-2 control-label">Indice DPE (Energie)</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" id="prefDpe" placeholder="Préférence d'indice DPE" ng-model="paramEdit.prefDpe">
+		</div>
+		<label for="prefDpe" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="prefGes" class="col-sm-2 control-label">Indice GES (Gaz à effet de serre)</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" id="prefGes" placeholder="Préférence d'indice GES" ng-model="paramEdit.prefGes">
+		</div>
+		<label for="prefGes" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="prefCoutEnergie" class="col-sm-2 control-label">Coût de l'énergie</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" id="prefCoutEnergie" placeholder="Préférence de coût d'énergie" ng-model="paramEdit.prefCoutEnergie">
+		</div>
+		<label for="prefCoutEnergie" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<div class="form-group">
+		<label for="prefTxHab" class="col-sm-2 control-label">Taxe d'habitation</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" id="prefTxHab" placeholder="Préférence de coût de la taxe d'habitation" ng-model="paramEdit.prefTxHab">
+		</div>
+		<label for="prefTxHab" class="col-sm-1 control-label">%</label>
+	</div>
+	
+	<br/><br/>
+	
+	<div class="alert alert-success" ng-show="success">{{messageAlert}}</div>
+	<div class="alert alert-danger" ng-show="error">{{messageAlert}}</div>
 	<button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="saveParams()" >Enregistrer</button>
 </form>

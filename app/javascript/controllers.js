@@ -5,6 +5,7 @@ function accueilController($scope,$http,$window){
 		$http.post('/addUser',$scope.userCreate)
 			.success(function(data){
 				$scope.userCreate="";
+				$('#createCompteOkModal').modal('show');
 			})
 			.error(function(data){
 			})
@@ -100,7 +101,7 @@ function homeController($scope,$http){
 				listHabitats.push(habitat);
 			}
 			$scope.listHabitats=listHabitats;
-		})
+		});
 	}
 	
 	
@@ -131,11 +132,10 @@ function paramController($scope,$http){
 		.success(function(data){
 			$scope.paramEdit=data;
 		})
-	
 }
 
 /**************** CONTROLLER DE L'EDITION D'HABITAT ***********/
-function editHabitatController($scope,$http,$route){
+function editHabitatController($scope,$http,$route,$location){
 				
 	$scope.messageAlert="";
 	$scope.success=false;
@@ -152,6 +152,25 @@ function editHabitatController($scope,$http,$route){
 				$scope.messageAlert="Erreur lors de la sauvegarde.";
 				$scope.error=true;
 			})
+	}
+	
+	$scope.delHabitat=function(){
+		if($scope.habitatEdit==null || 
+			$scope.habitatEdit.id==null || 
+			$scope.habitatEdit.id==""){
+			// Ici, c'est un enregistrement qui n'existe pas, on fait donc juste une redirection
+			$location.path('/');
+		}else{
+			// L'enregistrement existe, il faut le supprimer
+			$http.get('/delHabitat/'+$scope.habitatEdit.id)
+				.success(function(data){
+					$location.path('/');
+				})
+				.error(function(data){
+					$scope.messageAlert="Erreur lors de la suppression.";
+					$scope.error=true;
+				})
+		}
 	}
 	
 	var idHabit = $route.current.params.idHabit;
