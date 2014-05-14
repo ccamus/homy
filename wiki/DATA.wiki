@@ -56,7 +56,7 @@
  * *contact* (contact)
  * *noteCalcul* (Note calculée)
 
-== PireParametre ==
+== pireParametre ==
  * *annee* (la pire différence entre l'année d'un habitat et l'année sélectionnée)
  * *surfT* (la pire différence entre la surface de terrain d'un habitat et celle sélectionnée)
  * *nbEtages* (la pire différence entre le nombre d'étages d'un habitat et celui sélectionnée)
