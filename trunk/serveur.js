@@ -205,6 +205,36 @@ app.get('/findHabitat/:id', function(req, res){
 	}
 });
 
+app.get('/delHabitat/:id', function(req, res){
+	var user = findUserBySession(req.sessionID);
+	var habitatId = req.params.id;
+	
+	if(user==null){
+		res.send(401);
+	}else{
+		var canDelete = false;
+		habitats.get(habitatId,
+			function(err, result, key) {
+				if (err) {
+					res.json(err);
+				} else {
+					if (result.userKey == user.key) {
+						// Ici on peut supprimer car l'enregistrement existe et qu'il est bien associé à l'utilisateur
+						habitats.remove(habitatId,function(err){
+								if (err) {
+									res.json(err);
+								}else{
+									res.send(200);
+								}
+							});
+					}else {
+						res.send(401);
+					}
+				}
+			});
+	}
+});
+
 /**************** GESTIONS DES PARAMETRES *********************/
 app.post('/saveParams', function(req, res){
 	var user = findUserBySession(req.sessionID);
