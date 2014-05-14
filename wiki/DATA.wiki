@@ -56,8 +56,15 @@
  * *contact* (contact)
  * *noteCalcul* (Note calculée)
 
-== pireParametre ==
+== lesY ==
+Table contenant les données extrêmes
  * *annee* (la pire différence entre l'année d'un habitat et l'année sélectionnée)
+ * *surfH* (la plus grande surface)
  * *surfT* (la pire différence entre la surface de terrain d'un habitat et celle sélectionnée)
  * *nbEtages* (la pire différence entre le nombre d'étages d'un habitat et celui sélectionnée)
+ * *nbPieces* (le plus grand nombre de pièces)
  * *nbCh* (la pire différence entre le nombre de chambres d'un habitat et celui sélectionnée)
+ * *nbSdb* (le plus grand nombre de salle de bain)
+ * *nbWc* (le plus grand nombre de wc)
+ * *energie* (le plus grand coût en énergie)
+ * *txHab* (la plus grande taxe d'habitation)
