@@ -1,7 +1,9 @@
 = Introduction =
 
-Add your content here.
+Wiki pour le projet homy
 
 
 = Details =
-[DATA]
+[DATA] : Définition des données
+[TODO] : Liste du reste à faire
+[Note] : Définition du système de notes
