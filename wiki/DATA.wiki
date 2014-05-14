@@ -54,3 +54,4 @@
  * *tHab* (coût de la taxe d'habitation)
  * *agence* (agence)
  * *contact* (contact)
+ * *noteCalcul* (Note calculée)
