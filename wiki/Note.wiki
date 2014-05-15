@@ -1,4 +1,3 @@
-[Homy]
 = Définition du système de note =
 
 == Introduction ==
