@@ -1,4 +1,3 @@
-[Homy]
 = Définition des données =
 
 == user ==
