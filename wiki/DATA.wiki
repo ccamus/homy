@@ -54,6 +54,7 @@
  * *agence* (agence)
  * *contact* (contact)
  * *noteCalcul* (Note calculée)
+ * *userKey* (Clé de l'utilisateur)
 
 == lesY ==
 Table contenant les données extrêmes
