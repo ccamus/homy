@@ -1,9 +1,3 @@
-= Introduction =
-
-Wiki pour le projet homy
-
-
-= Details =
  * [DATA] : Définition des données
  * [TODO] : Liste du reste à faire
  * [Note] : Définition du système de notes
