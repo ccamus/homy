@@ -1,3 +1,5 @@
- * [DATA] : Définition des données
- * [TODO] : Liste du reste à faire
- * [Note] : Définition du système de notes
+[DATA Définition des données]
+
+[Note Définition du système de notes]
+
+[TODO Todo list]
