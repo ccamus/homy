@@ -35,7 +35,6 @@ function accueilController($scope,$http,$window){
 	var r = Math.floor((Math.random() * 2) + 1);
 	$scope.img="/image/accueil00"+r+".jpg";
 	$('#popover').popover();
-
 }
 
 /**************** CONTROLLER DU MENU **************************/
@@ -102,8 +101,7 @@ function homeController($scope,$http){
 			}
 			$scope.listHabitats=listHabitats;
 		});
-	}
-	
+	}	
 	
 	$scope.listAccueil();
 }
@@ -117,15 +115,23 @@ function paramController($scope,$http){
 	
 	$scope.saveParams=function(){
 		$http.post('/saveParams',$scope.paramEdit)
-			.success(function(data){
-				
-				$scope.messageAlert="Paramètres enregistrés.";
-				$scope.success=true;
-			})
-			.error(function(data){
-				$scope.messageAlert="Erreur lors de la sauvegarde.";
-				$scope.error=true;
-			})
+			.then(
+				function(){
+					return $http.get('/reloadNotes'); 
+				},
+				function(){
+					$scope.messageAlert="Erreur lors de la sauvegarde.";
+					$scope.error=true;
+				})
+			.then(
+				function(){
+					
+					$scope.messageAlert="Paramètres enregistrés.";
+					$scope.success=true;
+				},function(){
+					$scope.messageAlert="Erreur lors de la sauvegarde.";
+					$scope.error=true;
+				});
 	}
 	
 	$http.get('/findParams')
@@ -143,15 +149,21 @@ function editHabitatController($scope,$http,$route,$location){
 	
 	$scope.saveHabitat=function(){
 		$http.post('/saveHabitat',$scope.habitatEdit)
-			.success(function(data){
-				
-				$scope.messageAlert="Habitat enregistré.";
-				$scope.success=true;
-			})
-			.error(function(data){
-				$scope.messageAlert="Erreur lors de la sauvegarde.";
-				$scope.error=true;
-			})
+			.then(function(){
+					return $http.get('/reloadNotes'); 
+				},
+				function(data){
+					$scope.messageAlert="Erreur lors de la sauvegarde.";
+					$scope.error=true;
+				})
+			.then(function(data){
+					$scope.messageAlert="Habitat enregistré.";
+					$scope.success=true;
+				},
+				function(data){
+					$scope.messageAlert="Erreur lors de la sauvegarde.";
+					$scope.error=true;
+				});
 	}
 	
 	$scope.delHabitat=function(){
@@ -163,13 +175,20 @@ function editHabitatController($scope,$http,$route,$location){
 		}else{
 			// L'enregistrement existe, il faut le supprimer
 			$http.get('/delHabitat/'+$scope.habitatEdit.id)
-				.success(function(data){
-					$location.path('/');
-				})
-				.error(function(data){
-					$scope.messageAlert="Erreur lors de la suppression.";
-					$scope.error=true;
-				})
+				.then(function(){
+						return $http.get('/reloadNotes'); 
+					},
+					function(data){
+						$scope.messageAlert="Erreur lors de la suppression.";
+						$scope.error=true;
+					})
+				.then(function(data){
+						$location.path('/');
+					},
+					function(data){
+						$scope.messageAlert="Erreur lors de la suppression.";
+						$scope.error=true;
+					});
 		}
 	}
 	
