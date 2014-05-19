@@ -2,10 +2,10 @@
 
  * Vérification du typage des champs
  * Informations déroulables sur la liste des habitats (accueil)
- * Mise en place du système de note
+ * ~~Mise en place du système de note~~
   # ~~Définition du principe~~
   # ~~Creation des paramètres dans l'appli~~
-  # Creation du système de note dans l'appli
+  # ~~Creation du système de note dans l'appli~~
  * Création des listes déroulantes etc
   # Definition des listes
   # Insertion des listes dans l'appli
