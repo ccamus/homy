@@ -10,7 +10,7 @@
   # Definition des listes
   # Insertion des listes dans l'appli
  * ~~Création du logo~~
- * Mise en place du validation du compte par mail
+ * Mise en place de la validation du compte par mail
   # Utilisation du compte seulement s'il a été validé par mail
   # Création d'un demon qui supprime les comptes non validés au bout d'un certain temps
  * Modification et suppression de compte
